@@ -20,7 +20,7 @@ public class Assento {
 
     @OneToMany(mappedBy = "assento", cascade = CascadeType.ALL)
     @JsonIgnore
-    private List<Assento> ingressos;
+    private List<Ingresso> ingressos;
 
     public Assento() {}
 
@@ -53,11 +53,11 @@ public class Assento {
         this.sala = sala;
     }
 
-    public List<Assento> getIngressos() {
+    public List<Ingresso> getIngressos() {
         return ingressos;
     }
 
-    public void setIngressos(List<Assento> ingressos) {
+    public void setIngressos(List<Ingresso> ingressos) {
         this.ingressos = ingressos;
     }
 }

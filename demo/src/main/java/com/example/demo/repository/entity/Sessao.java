@@ -29,7 +29,7 @@ public class Sessao {
 
     @OneToMany(mappedBy = "sessao", cascade = CascadeType.ALL)
     @JsonIgnore
-    private List<Sala> ingressos;
+    private List<Ingresso> ingressos;
 
     public Sessao() {}
 
@@ -80,11 +80,11 @@ public class Sessao {
         this.sala = sala;
     }
 
-    public List<Sala> getIngressos() {
+    public List<Ingresso> getIngressos() {
         return ingressos;
     }
 
-    public void setIngressos(List<Sala> ingressos) {
+    public void setIngressos(List<Ingresso> ingressos) {
         this.ingressos = ingressos;
     }
 }

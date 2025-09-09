@@ -15,7 +15,7 @@ public class Sala {
     private Integer numero;
 
     @Column(nullable = false)
-    private String capacidade;
+    private Integer capacidade;
 
     @OneToMany(mappedBy = "sala", cascade = CascadeType.ALL)
     @JsonIgnore
@@ -27,7 +27,7 @@ public class Sala {
 
     public Sala() {}
 
-    public Sala(Integer numero, String capacidade) {
+    public Sala(Integer numero, Integer capacidade) {
         this.numero = numero;
         this.capacidade = capacidade;
     }
@@ -48,11 +48,11 @@ public class Sala {
         this.numero = numero;
     }
 
-    public String getCapacidade() {
+    public Integer getCapacidade() {
         return capacidade;
     }
 
-    public void setCapacidade(String capacidade) {
+    public void setCapacidade(Integer capacidade) {
         this.capacidade = capacidade;
     }
 
