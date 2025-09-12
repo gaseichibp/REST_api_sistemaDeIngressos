@@ -22,7 +22,6 @@ public class Ingresso {
 
     @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "sessao_id", nullable = false)
-    @JsonIgnore
     private Sessao sessao;
 
     @ManyToOne(fetch = FetchType.LAZY)
